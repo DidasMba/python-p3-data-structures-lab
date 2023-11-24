@@ -41,5 +41,29 @@ def get_average_heat_level(spicy_foods):
     num_foods = len(spicy_foods)
     return total_heat // num_foods if num_foods > 0 else 0
 
+# lib/data_structures.py
+
 def create_spicy_food(spicy_foods, spicy_food):
-    pass
+    """
+    Add a new spicy food to the list of spicy foods.
+
+    Parameters:
+    - spicy_foods (list): List of existing spicy foods.
+    - spicy_food (dict): Dictionary representing the new spicy food.
+
+    Returns:
+    - list: Updated list of spicy foods.
+    """
+    spicy_foods.append(spicy_food)
+    return spicy_foods
+
+# Example usage:
+new_spicy_food = {
+    "name": "Spicy Ramen",
+    "cuisine": "Japanese",
+    "heat_level": 7,
+}
+
+spicy_foods = create_spicy_food(spicy_foods, new_spicy_food)
+print_spicy_foods(spicy_foods)
+
